@@ -352,124 +352,289 @@ Days left: 150
 //  }
 
 // ================= Question 30 =================
-// className
+// higher order function
 // Answer
+// function createCalculator(operation){return function(x,y){return operation (x,y)}}
 
+// function subtract(a,b){return a - b;}
+// function addition(a,b){return a + b;}
 
+// let subtractCalculator = createCalculator(subtract);
+// let addCalculator = createCalculator(addition);
+// console.log(addCalculator(4,6))
+// console.log(subtractCalculator(200,20))
 // ================= Question 31 =================
-
+// higher order function
 // Answer
- 
+// function higher(operation){return function(x,y){return operation(x,y)}} 
+// function subtract(a,b){return a-b;}
+// function add(a,b){return a+b;}
 
+// let addHigher = higher(add);
+// let subtractHigher = higher(subtract);
+// console.log(addHigher(3,4));
+// console.log(subtractHigher(3,1))
 
 // ================= Question 32 =================
-
+// higer order function
 // Answer
- 
+//  function higherOrder(operation){return function(x,y){return operation(x,y)}}
 
+//  function squaring(n){return n*2}
+//  function addition(a,b){return a+b;}
+// let squre = higherOrder(squaring);
+// let add = higherOrder(addition);
+// console.log(add(8,2))
+// console.log(squre(8))
 
 // ================= Question 33 =================
-
+// Filter Even Numbers
+// Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Task: Use filter() to create a new array containing only even numbers.
+// Task 2: Filter Words Longer Than 5 Letters
 // Answer
- 
-
+//  let array =  [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//  let evenNumbers = array.filter((item)=>{return item % 2 === 0})
+//  console.log(evenNumbers)
 
 // ================= Question 34 =================
+/*
+ Filter Words Longer Than 5 Letters
+Array: ["apple", "banana", "grape", "kiwi", "pineapple"]
+Task: Use filter() to return all words with more than 5 letters.
 
+*/
 // Answer
- 
+//   let array = ["apple", "banana", "grape", "kiwi", "pineapple"];
+//   let result = array.filter((element)=>{return element.length > 5;})
+//   console.log(result)
 
 
 // ================= Question 35 =================
-
+/* 
+Filter Positive Numbers
+Array: [-2, 5, -8, 10, 0, -3, 7]
+Task: Use filter() to get only positive numbers.
+*/
 // Answer
- 
+//  const array = [-2, 5, -8, 10, 0, -3, 7];
+//  const positive = array.filter((element)=>{return element >0});
+//  console.log(positive);
 
 
 // ================= Question 36 =================
+/*
+Filter Students With 80+ Marks
+Array of objects:
 
+js
+Copy
+Edit
+let students = [
+  { name: "Ali", marks: 75 },
+  { name: "Sara", marks: 85 },
+  { name: "John", marks: 92 },
+  { name: "Zain", marks: 60 }
+];
+Task: Use filter() to get students who scored 80 or more.
+
+*/
 // Answer
- 
-
+//  let students = [
+//   { name: "Ali", marks: 75 },
+//   { name: "Sara", marks: 85 },
+//   { name: "John", marks: 92 },
+//   { name: "Zain", marks: 60 }
+// ];
+// const requirement = students.filter(function(element){return element.marks >= 80;})
+// console.log(requirement)
 
 // ================= Question 37 =================
-
+/*
+Filter Words Starting With "A"
+Array: ["Apple", "Banana", "Avocado", "Orange", "Apricot"]
+Task: Use filter() to return only words starting with "A" or "a".
+*/
 // Answer
- 
-
+//  let array = ["Apple", "Banana", "Avocado","anem", "Orange", "Apricot"];
+//  let required = array.filter(function(item){return item.startsWith('A') || item.startsWith('a')})
+// console.log(required)
 
 // ================= Question 38 =================
-
+/*
+let people = [
+  { name: "Ali", age: 17 },
+  { name: "Sara", age: 22 },
+  { name: "John", age: 15 },
+  { name: "Zain", age: 30 }
+];
+Task: Use filter() to get all people who are 18 or older.
+*/
 // Answer
- 
-
+//  let people = [
+//   { name: "Ali", age: 17 },
+//   { name: "Sara", age: 22 },
+//   { name: "John", age: 15 },
+//   { name: "Zain", age: 30 }
+// ];
+// let adult = people.filter((item)=>{return item.age >=18});
+// console.log(adult)
 
 // ================= Question 39 =================
+/*
+ Find a number in an array
+// Array of numbers
+const numbers = [10, 25, 33, 47, 58, 60];
 
+// TODO: Use find() to get the first number greater than 40
+*/
 // Answer
- 
-
+//  const numbers = [10, 25, 33, 47, 58, 60];
+//  let required = numbers.find((item)=>{return item > 40})
+//  console.log(required)
 
 // ================= Question 40 =================
+/* 
+// Array of fruits
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
+// TODO: Use find() to get the first fruit that starts with the letter 'm'
+*/
 // Answer
- 
-
+//  const fruits = ["apple", "banana", "grapes", "mango", "orange"];
+//  let required = fruits.find((item)=>{return item.startsWith('m')});
+//  console.log(required)
 
 // ================= Question 41 =================
+/*
+const users = [
+  { name: "Ali", age: 20 },
+  { name: "Sara", age: 25 },
+  { name: "Ahmed", age: 22 },
+];
 
+// TODO: Use find() to get the user whose age is 25
+*/
 // Answer
- 
+ const users = [
+  { name: "Ali", age: 20 },
+  { name: "Sara", age: 25 },
+  { name: "Ahmed", age: 22 },
+];
+let required = users.find(function(item){return item.age === 25});
+console.log(required)
 
 
 // ================= Question 42 =================
+/*
+ Find a negative number
+// Array with positive and negative numbers
+const numbers = [4, -2, 7, 10, -5, 3];
 
+// TODO: Use find() to get the first negative number
+*/
 // Answer
- 
+//  const numbers = [4, -2, 7, 10, -5, 3];
+//  let need = numbers.find(function(item){return item < 0});
+//  console.log(need);
 
 
 // ================= Question 43 =================
+/*
+Find a string with length greater than 5
+js
+Copy
+Edit
+// Array of country names
+const countries = ["Pakistan", "India", "USA", "Nepal", "Bangladesh"];
 
+// TODO: Use find() to get the first country name with length greater than 5
+*/
 // Answer
- 
-
+//  const countries = ["Pakistan", "India", "USA", "Nepal", "Bangladesh"];
+//  let need = countries.find(function(item){return item.length > 5});
+//  console.log(need)
 
 // ================= Question 44 =================
+/*
+/ Array of colors
+const colors = ["red", "green", "blue", "yellow"];
 
+// TODO: Use forEach() to print each color in the console
+*/
 // Answer
- 
-
+//  const colors = ["red", "green", "blue", "yellow"];
+// colors.forEach(function(element){console.log(element)});
 
 // ================= Question 45 =================
+/*
+// Array of animals
+const animals = ["cat", "dog", "elephant", "lion"];
 
+// TODO: Use forEach() to print each animal with its index
+// Example Output: 0: cat, 1: dog ...
+*/
 // Answer
- 
-
+//  const animals = ["cat", "dog", "elephant", "lion"];
+//  animals.forEach(function(index,animal){console.log(index + ': ' + animal)})
 
 // ================= Question 46 =================
+/*
+const numbers = [10, 20, 30, 40];
 
+// TODO: Use forEach() to calculate the sum of all numbers
+*/
 // Answer
+// const numbers = [10, 20, 30, 40];
+// let sum = 0;
+// numbers.forEach(function(num){sum = sum + num;
+// })
  
-
+// console.log(sum)
 
 // ================= Question 47 =================
+/*
+ Convert all names to uppercase
 
+// Array of names
+const names = ["ali", "ahmed", "sara", "raza"];
+
+// TODO: Use forEach() to print all names in uppercase
+*/
 // Answer
- 
+//  const names = ["ali", "ahmed", "sara", "raza"];
+//  names.forEach(function(element){console.log(element.toUpperCase())})
 
 
 // ================= Question 48 =================
+/*
+Create an array of fruits. Ask the user to enter a fruit name (using prompt) and 
+check if the fruit exists in the array using includes().
+Example Output:
 
-// Answer
- 
+Enter fruit name: mango
+Yes! mango is available.
 
+*/
+// ============= Ans ===========
+// let fruit  = ['apple','banana','mango','grapes'];
+// let check = prompt('enter fruit name').toLowerCase();
+// if(fruit.includes(check)){console.log(`Yes ${check} is available in fruit list`)}
+// else{console.log(`${check} is not availabe in list`)}
 
 // ================= Question 49 =================
+/*
+Check if a word is in a sentence
+Create a string sentence and check if a certain word exists in that sentence using includes().
+Example:
 
+let sentence = "JavaScript is very interesting";
+console.log(sentence.includes("JavaScript")); // true
+*/
 // Answer
- 
+//  let sentence = 'JavaScript is very interesting';
+//  console.log(sentence.includes('JavaScript'))
+// 2 
+// let name = 'Aziz';
+// console.log(name.toLowerCase().includes('I'));
 
-
-// ================= Question 50 =================
-
-// Answer
